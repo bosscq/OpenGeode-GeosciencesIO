@@ -27,8 +27,8 @@ with open('${CMAKE_CURRENT_LIST_DIR}/requirements.txt') as f:
     install_requires = f.read().strip().split('\n')
 
 setup(
-    name='OpenGeode-GeosciencesIO',
-    version='${CPACK_PACKAGE_VERSION}',
+    name='OpenGeode-GeosciencesIO-TotalEnergies',
+    version='3.5.3',
     description='Input/Output formats for OpenGeode-Geosciences',
     long_description=long_description,
     long_description_content_type='text/markdown',

@@ -1,2 +1,2 @@
-OpenGeode-core >= 9.0.13, == 9.*
-OpenGeode-Geosciences >= 5.2.5, == 5.*
+OpenGeode-TotalEnergies >= 9.1.10, == 9.*
+OpenGeode-Geosciences-TotalEnergies >= 5.2.6, == 5.*
