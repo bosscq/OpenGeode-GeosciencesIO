@@ -1,4 +1,4 @@
-# Copyright (c) 2019 - 2022 Geode-solutions
+# Copyright (c) 2019 - 2023 Geode-solutions
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -18,7 +18,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.15)
+
+cmake_policy(SET CMP0091 NEW)
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDLL")
 
 # Define the project
 project(OpenGeode-GeosciencesIO CXX)
@@ -27,8 +30,10 @@ option(OPENGEODE_GEOSCIENCESIO_WITH_TESTS "Compile test projects" ON)
 option(OPENGEODE_GEOSCIENCESIO_WITH_PYTHON "Compile Python bindings" OFF)
 
 # Get OpenGeode-GeosciencesIO dependencies
-#find_package(OpenGeode REQUIRED)
-#find_package(OpenGeode-Geosciences REQUIRED)
+#find_package(OpenGeode REQUIRED CONFIG)
+find_package(GDAL REQUIRED CONFIG)
+find_package(pugixml REQUIRED CONFIG)
+#find_package(OpenGeode-Geosciences REQUIRED CONFIG)
 
 #------------------------------------------------------------------------------------------------
 # Configure the OpenGeode-GeosciencesIO libraries
